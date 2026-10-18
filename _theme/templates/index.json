@@ -1,0 +1,177 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "custom_liquid_eaipxN": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<style>\n  /* --- REMOVE THE RIDE THEME DIVIDER / BORDER ONLY FOR THIS SECTION --- */\n  .shopify-section:has(.nx-wrap),\n  .shopify-section:has(.nx-wrap)::before,\n  .shopify-section:has(.nx-wrap)::after {\n    border: 0 !important;\n    box-shadow: none !important;\n    background: transparent !important;\n  }\n  /* Some themes add backgrounds on nested color wrappers — make them transparent here */\n  .shopify-section:has(.nx-wrap) *[class*=\"color-background\"] {\n    background: transparent !important;\n  }\n\n  /* ---- Your section styles ---- */\n  :root{\n    --bg:#0F0F10;\n    --card:#161718;\n    --ink:#F7F7F7;\n    --muted:#A5A7AC;\n    --gold:#D4AF37;\n    --gold-2:#BA9930;\n    --stroke:rgba(212,175,55,.28);\n  }\n  .nx-wrap{color:var(--ink);background:var(--bg);border:1px solid rgba(255,255,255,.05);border-radius:18px;padding:28px 22px;margin:28px 0}\n  .nx-kicker{display:inline-block;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#FFD976;background:rgba(212,175,55,.08);border:1px solid var(--stroke);border-radius:999px;padding:6px 10px;margin-bottom:12px}\n  .nx-h1{font-size:clamp(28px,4vw,44px);line-height:1.1;margin:0 0 6px;font-weight:800}\n  .nx-sub{color:var(--muted);font-size:clamp(14px,2.2vw,16px);margin:0 0 18px}\n  .nx-cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px}\n  .nx-btn{appearance:none;cursor:pointer;border:none;border-radius:12px;padding:12px 18px;font-weight:800}\n  .nx-btn--gold{background:linear-gradient(180deg,#E8C766,#BA9930);color:#111;box-shadow:0 12px 28px rgba(186,153,48,.26)}\n  .nx-btn--hollow{background:transparent;color:var(--ink);border:1px solid var(--stroke)}\n  .nx-grid{display:grid;gap:16px}\n  .nx-3{grid-template-columns:repeat(3,minmax(0,1fr))}\n  .nx-4{grid-template-columns:repeat(4,minmax(0,1fr))}\n  @media(max-width:980px){.nx-3{grid-template-columns:repeat(2,1fr)}.nx-4{grid-template-columns:repeat(2,1fr)}}\n  @media(max-width:620px){.nx-3,.nx-4{grid-template-columns:1fr}}\n  .nx-card{background:var(--card);border:1px solid rgba(255,255,255,.06);border-radius:14px;padding:16px}\n  .nx-card h3{margin:8px 0;font-size:18px;font-weight:800}\n  .nx-card p{margin:6px 0 0;color:var(--muted);font-size:14px}\n  .nx-icon{width:38px;height:38px;border-radius:10px;display:grid;place-items:center;background:rgba(212,175,55,.12);border:1px solid var(--stroke);color:#FFD976;font-weight:900}\n  .nx-step{display:flex;gap:14px;align-items:flex-start}\n  .nx-step .num{min-width:34px;height:34px;border-radius:999px;background:rgba(212,175,55,.14);border:1px solid var(--stroke);display:grid;place-items:center;font-weight:800;color:#FFD976}\n  .nx-strip{display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:center;background:linear-gradient(180deg,#171719,#141416);border:1px solid var(--stroke);border-radius:14px;padding:14px;margin:18px 0}\n  .nx-pill{border:1px solid var(--stroke);color:#FFD976;background:rgba(212,175,55,.08);border-radius:999px;padding:6px 10px;font-size:12px}\n  .nx-faq{border:1px solid rgba(255,255,255,.06);border-radius:14px;overflow:hidden}\n  .nx-faq details{border-top:1px solid rgba(255,255,255,.06)}\n  .nx-faq details:first-of-type{border-top:0}\n  .nx-faq summary{cursor:pointer;padding:14px 16px;background:var(--card);font-weight:700;list-style:none}\n  .nx-faq summary::-webkit-details-marker{display:none}\n  .nx-faq .ans{padding:0 16px 14px;color:var(--muted);background:#121314}\n  .nx-note{color:#A5A7AC;font-size:12.5px;margin-top:10px}\n  .nx-note strong{color:#FFD976}\n</style>\n\n<section class=\"nx-wrap\">\n  <!-- HERO / INTRO -->\n  <span class=\"nx-kicker\">Premium • Fast • Verified</span>\n  <h2 class=\"nx-h1\">Dispensary-Sourced Vapes. Delivered To Your Door.</h2>\n  <p class=\"nx-sub\">\n    We source directly from licensed dispensaries and deliver to you quickly and discreetly.\n    Every product is authenticated and quality-checked so you always know exactly what you’re getting.\n  </p>\n  <div class=\"nx-cta\">\n    <a href=\"/collections/all\" class=\"nx-btn nx-btn--gold\">Explore Products</a>\n    \n  <!-- VALUE PROPS -->\n  <div class=\"nx-grid nx-3\" style=\"margin-top:22px\">\n    <div class=\"nx-card\">\n      <div class=\"nx-icon\">🏷️</div>\n      <h3>Dispensary Direct</h3>\n      <p>We only partner with licensed dispensaries so products remain compliant, traceable, and fresh.</p>\n    </div>\n    <div class=\"nx-card\">\n      <div class=\"nx-icon\">✅</div>\n      <h3>Authenticated & Verified</h3>\n      <p>Each item is sealed, batch-checked, and verified for authenticity before it ships to you.</p>\n    </div>\n    <div class=\"nx-card\">\n      <div class=\"nx-icon\">🚚</div>\n      <h3>Fast, Discreet Delivery</h3>\n      <p>Plain packaging, real-time updates, and quick fulfillment — your privacy comes first.</p>\n    </div>\n  </div>\n\n  <!-- HOW IT WORKS -->\n  <div style=\"margin-top:26px\">\n    <span class=\"nx-kicker\">How it works</span>\n    <div class=\"nx-grid nx-4\">\n      <div class=\"nx-card nx-step\">\n        <div class=\"num\">1</div>\n        <div>\n          <h3>Browse</h3>\n          <p>Choose verified products curated from trusted dispensaries.</p>\n        </div>\n      </div>\n      <div class=\"nx-card nx-step\">\n        <div class=\"num\">2</div>\n        <div>\n          <h3>Verify</h3>\n          <p>We confirm authenticity, seal integrity, and batch details on every item.</p>\n        </div>\n      </div>\n      <div class=\"nx-card nx-step\">\n        <div class=\"num\">3</div>\n        <div>\n          <h3>Deliver</h3>\n          <p>Your order ships quickly in discreet, protective packaging with tracking.</p>\n        </div>\n      </div>\n      <div class=\"nx-card nx-step\">\n        <div class=\"num\">4</div>\n        <div>\n          <h3>Enjoy</h3>\n          <p>Open-box confidence: what you ordered is exactly what arrives — verified.</p>\n        </div>\n      </div>\n    </div>\n  </div>\n\n  <!-- VERIFICATION STRIP -->\n  <div class=\"nx-strip\" aria-label=\"Assurances\">\n    <span class=\"nx-pill\">Licensed sourcing</span>\n    <span class=\"nx-pill\">Tamper-evident seals</span>\n    <span class=\"nx-pill\">Batch / lot checks</span>\n    \n    <span class=\"nx-pill\">Discreet packaging</span>\n  </div>\n\n  <!-- FAQs -->\n  <div style=\"margin-top:10px\">\n    <span class=\"nx-kicker\">FAQs</span>\n    <div class=\"nx-faq\">\n      <details>\n        <summary>Where do you source products?</summary>\n        <div class=\"ans\">Exclusively from licensed dispensaries and authorized suppliers. We do not purchase from grey-market sources.</div>\n      </details>\n      <details>\n        <summary>How do you verify authenticity?</summary>\n        <div class=\"ans\">We inspect tamper-evident seals, confirm batch/lot info, and cross-check with supplier data. If an item doesn’t pass, it doesn’t ship.</div>\n      </details>\n      <details>\n        <summary>What does delivery look like?</summary>\n        <div class=\"ans\">Your order ships quickly in plain packaging with full tracking. Delivery timelines are shown at checkout based on your address.</div>\n      </details>\n          </div>\n    <p class=\"nx-note\">\n      <strong>Important:</strong> By ordering you confirm you are 21+ and agree to abide by all local regulations. Availability may vary by region.\n    </p>\n  </div>\n</section>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_6cqm9L": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "{% assign bulk_notice_seconds = 9 %}\n\n<div id=\"bulk-news-notice\" class=\"bulk-news-notice\" role=\"status\" aria-live=\"polite\">\n  <div class=\"bulk-news-notice__inner\">\n    <div class=\"bulk-news-notice__bar\"></div>\n\n    <div class=\"bulk-news-notice__header\">\n      <span class=\"bulk-news-notice__tag\">NEWS</span>\n\n      <button\n        type=\"button\"\n        class=\"bulk-news-notice__close\"\n        aria-label=\"Close notification\"\n        onclick=\"document.getElementById('bulk-news-notice').classList.add('is-hiding')\"\n      >\n        ×\n      </button>\n    </div>\n\n    <div class=\"bulk-news-notice__headline\">\n      GEEK BAR PULSE X BULK OPTIONS COMING SOON\n    </div>\n  </div>\n</div>\n\n<style>\n  .bulk-news-notice {\n    position: fixed;\n    right: 24px;\n    bottom: 24px;\n    z-index: 9999;\n    width: min(430px, calc(100vw - 32px));\n    animation: bulkNewsSlideIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;\n  }\n\n  .bulk-news-notice__inner {\n    position: relative;\n    overflow: hidden;\n    background: linear-gradient(180deg, #121212 0%, #090909 100%);\n    border: 1px solid rgba(201, 162, 39, 0.32);\n    border-radius: 14px;\n    padding: 16px 18px 18px;\n    box-shadow:\n      0 18px 40px rgba(0, 0, 0, 0.42),\n      0 0 0 1px rgba(255, 215, 120, 0.04) inset;\n  }\n\n  .bulk-news-notice__inner::before {\n    content: \"\";\n    position: absolute;\n    inset: 0;\n    pointer-events: none;\n    background: linear-gradient(\n      135deg,\n      rgba(201, 162, 39, 0.08) 0%,\n      rgba(201, 162, 39, 0.02) 28%,\n      transparent 60%\n    );\n  }\n\n  .bulk-news-notice__bar {\n    position: absolute;\n    top: 0;\n    left: 0;\n    right: 0;\n    height: 3px;\n    background: linear-gradient(90deg, #8f6a16 0%, #d7b24d 50%, #8f6a16 100%);\n  }\n\n  .bulk-news-notice__header {\n    display: flex;\n    align-items: center;\n    justify-content: space-between;\n    margin-bottom: 14px;\n    gap: 12px;\n  }\n\n  .bulk-news-notice__tag {\n    display: inline-flex;\n    align-items: center;\n    justify-content: center;\n    padding: 5px 10px;\n    min-height: 24px;\n    border-radius: 999px;\n    border: 1px solid rgba(201, 162, 39, 0.26);\n    background: rgba(201, 162, 39, 0.10);\n    color: #e7c86f;\n    font-size: 10px;\n    font-weight: 700;\n    letter-spacing: 0.16em;\n    text-transform: uppercase;\n    line-height: 1;\n  }\n\n  .bulk-news-notice__headline {\n    color: #f6f0dc;\n    font-size: 19px;\n    line-height: 1.3;\n    font-weight: 800;\n    letter-spacing: 0.03em;\n    text-transform: uppercase;\n    max-width: 92%;\n  }\n\n  .bulk-news-notice__close {\n    appearance: none;\n    border: 0;\n    background: transparent;\n    color: rgba(255, 245, 220, 0.72);\n    width: 28px;\n    height: 28px;\n    border-radius: 50%;\n    display: inline-flex;\n    align-items: center;\n    justify-content: center;\n    font-size: 22px;\n    line-height: 1;\n    cursor: pointer;\n    transition: all 0.2s ease;\n    padding: 0;\n    margin: 0;\n  }\n\n  .bulk-news-notice__close:hover {\n    color: #ffffff;\n    background: rgba(201, 162, 39, 0.10);\n  }\n\n  .bulk-news-notice.is-hiding {\n    animation: bulkNewsFadeOut 0.4s ease forwards;\n    pointer-events: none;\n  }\n\n  @keyframes bulkNewsSlideIn {\n    0% {\n      opacity: 0;\n      transform: translateY(24px) scale(0.97);\n    }\n    100% {\n      opacity: 1;\n      transform: translateY(0) scale(1);\n    }\n  }\n\n  @keyframes bulkNewsFadeOut {\n    0% {\n      opacity: 1;\n      transform: translateY(0) scale(1);\n    }\n    100% {\n      opacity: 0;\n      transform: translateY(12px) scale(0.985);\n      visibility: hidden;\n    }\n  }\n\n  @media screen and (max-width: 749px) {\n    .bulk-news-notice {\n      right: 16px;\n      left: 16px;\n      bottom: 16px;\n      width: auto;\n    }\n\n    .bulk-news-notice__inner {\n      padding: 15px 16px 16px;\n      border-radius: 12px;\n    }\n\n    .bulk-news-notice__headline {\n      font-size: 16px;\n      max-width: 100%;\n    }\n  }\n</style>\n\n<script>\n  (function() {\n    var notice = document.getElementById('bulk-news-notice');\n    if (!notice) return;\n\n    setTimeout(function() {\n      notice.classList.add('is-hiding');\n    }, {{ bulk_notice_seconds | times: 1000 | round }});\n\n    notice.addEventListener('animationend', function(e) {\n      if (e.animationName === 'bulkNewsFadeOut') {\n        notice.style.display = 'none';\n      }\n    });\n  })();\n</script>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_bT3mdf": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div class=\"uni-eta-banner\" role=\"status\" aria-live=\"polite\">\n  <div class=\"uni-eta-banner__inner\">\n    <span class=\"uni-eta-banner__dot\" aria-hidden=\"true\"></span>\n    <span class=\"uni-eta-banner__text\">\n      Current Shipping ETA: <strong>2–4 Business Days (Standard USPS Shipping)</strong>\n    </span>\n  </div>\n</div>\n\n<style>\n  .uni-eta-banner{\n    width: 100%;\n    display: flex;\n    justify-content: center;\n    padding: 10px 12px;\n    margin: 12px 0;\n  }\n\n  .uni-eta-banner__inner{\n    width: min(980px, 100%);\n    display: inline-flex;\n    align-items: center;\n    gap: 10px;\n    padding: 12px 16px;\n    border-radius: 14px;\n\n    /* Dark theme look */\n    background: rgba(0,0,0,0.45);\n    border: 1px solid rgba(212, 175, 55, 0.35); /* gold accent */\n    box-shadow: 0 10px 30px rgba(0,0,0,0.35);\n    backdrop-filter: blur(6px);\n    -webkit-backdrop-filter: blur(6px);\n  }\n\n  .uni-eta-banner__dot{\n    width: 10px;\n    height: 10px;\n    border-radius: 999px;\n    background: #d4af37; /* gold */\n    box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.16);\n    flex: 0 0 auto;\n  }\n\n  .uni-eta-banner__text{\n    color: rgba(255,255,255,0.92);\n    font-size: 14px;\n    letter-spacing: 0.2px;\n    line-height: 1.2;\n  }\n\n  .uni-eta-banner__text strong{\n    color: #d4af37; /* gold highlight */\n    font-weight: 700;\n  }\n\n  /* Mobile tweaks */\n  @media (max-width: 480px){\n    .uni-eta-banner__inner{\n      padding: 10px 12px;\n      border-radius: 12px;\n    }\n    .uni-eta-banner__text{\n      font-size: 13px;\n    }\n  }\n</style>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "<em><strong>Dispensary-Sourced, Authenticated & Delivered. (FREE SHIPPING UNTIL AUGUST 1ST!)</strong></em>",
+        "heading_size": "h1",
+        "description": "<p> </p>",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "single",
+        "products_to_show": 10,
+        "columns_desktop": 5,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "outline",
+        "enable_desktop_slider": false,
+        "color_scheme": "background-1",
+        "image_ratio": "portrait",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": true,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 0,
+        "padding_bottom": 48
+      }
+    },
+    "featured_collection_qiUwVQ": {
+      "type": "featured-collection",
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "title": "Bulk  Orders / Prices. Please contact us for any larger bulk order inquires!",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "blk",
+        "products_to_show": 6,
+        "columns_desktop": 5,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "custom_liquid_tFPPr8": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<style>\n  .partner-badge {\n    background: radial-gradient(circle at center, rgba(255, 215, 0, 0.08), rgba(0, 0, 0, 0.4));\n    border: 1px solid rgba(212, 175, 55, 0.25);\n    border-radius: 20px;\n    padding: 40px 30px;\n    text-align: center;\n    margin: 60px auto;\n    max-width: 640px;\n    box-shadow: 0 0 24px rgba(255, 215, 0, 0.05);\n    position: relative;\n    overflow: hidden;\n  }\n\n  .partner-badge::before {\n    content: \"\";\n    position: absolute;\n    width: 300px;\n    height: 300px;\n    background: radial-gradient(circle, rgba(212,175,55,0.15) 0%, transparent 70%);\n    border-radius: 50%;\n    top: -100px;\n    left: calc(50% - 150px);\n    z-index: 0;\n    animation: pulseRing 5s infinite ease-in-out;\n  }\n\n  .partner-badge h2 {\n    font-size: 28px;\n    color: #FFD976;\n    margin: 0;\n    z-index: 2;\n    position: relative;\n    font-weight: 800;\n    letter-spacing: 1px;\n    text-transform: uppercase;\n  }\n\n  .partner-badge p {\n    font-size: 14px;\n    color: #aaa;\n    margin-top: 10px;\n    letter-spacing: 0.5px;\n    z-index: 2;\n    position: relative;\n  }\n\n  @keyframes pulseRing {\n    0%, 100% {\n      transform: scale(1);\n      opacity: 0.25;\n    }\n    50% {\n      transform: scale(1.2);\n      opacity: 0.4;\n    }\n  }\n</style>\n\n<div class=\"partner-badge\">\n  <h2>Official Sponsor of Raw Garden</h2>\n  <p>Based in California</p>\n</div>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "30784c83-e0d4-481b-b174-352bf7141c14": {
+      "type": "rich-text",
+      "blocks": {
+        "template--16103074201767__30784c83-e0d4-481b-b174-352bf7141c14-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<em>Presented / Managed By UNI. 35,000+ Customers Nationwide</em>",
+            "heading_size": "h1"
+          }
+        },
+        "template--16103074201767__30784c83-e0d4-481b-b174-352bf7141c14-button-1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop Now!",
+            "button_link": "shopify://collections/all",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--16103074201767__30784c83-e0d4-481b-b174-352bf7141c14-heading-1",
+        "template--16103074201767__30784c83-e0d4-481b-b174-352bf7141c14-button-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 32,
+        "padding_bottom": 52
+      }
+    },
+    "custom_liquid_ddhCHr": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<style>\n  .footer-section {\n    background: #0f0f10;\n    border-top: 1px solid rgba(212,175,55,0.15);\n    padding: 40px 20px;\n    color: #ccc;\n    text-align: center;\n    font-size: 14px;\n  }\n\n  .footer-section .branding {\n    font-size: 20px;\n    font-weight: 800;\n    color: #FFD976;\n    letter-spacing: 1px;\n    margin-bottom: 12px;\n  }\n\n  .footer-section .links {\n    margin: 20px 0;\n    display: flex;\n    flex-wrap: wrap;\n    justify-content: center;\n    gap: 14px;\n  }\n\n  .footer-section .links a {\n    color: #aaa;\n    text-decoration: none;\n    font-weight: 600;\n    transition: color 0.2s;\n  }\n\n  .footer-section .links a:hover {\n    color: #FFD976;\n  }\n\n  .footer-section .legal {\n    font-size: 12px;\n    color: #777;\n    margin-top: 20px;\n    line-height: 1.5;\n  }\n</style>\n\n<div class=\"footer-section\">\n  <div class=\"branding\">\n  <div class=\"links\">\n    \n   \n  </div>\n  <div class=\"legal\">\n    © {{ 'now' | date: \"%Y\" }} {{ shop.name }}. All rights reserved.<br>\n  \n    Licensed vendor. Based in California.\n  </div>\n</div>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_cPxbcW": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "{% comment %} High Volume Notice Popup {% endcomment %}\n\n<div id=\"hv-notif\" style=\"\n  position:fixed;\n  bottom:28px;\n  right:24px;\n  z-index:9999;\n  background:#1a1a1a;\n  border:1px solid #c9a84c;\n  border-top:3px solid #c9a84c;\n  border-radius:8px;\n  padding:18px 44px 18px 18px;\n  max-width:360px;\n  width:calc(100vw - 48px);\n  display:flex;\n  flex-direction:column;\n  gap:8px;\n  opacity:0;\n  transform:translateY(30px);\n  transition:transform 0.55s cubic-bezier(.22,1,.36,1), opacity 0.5s ease;\n\">\n  <button onclick=\"hvClose()\"\n    style=\"position:absolute;top:10px;right:13px;background:none;border:none;color:#c9a84c;font-size:17px;cursor:pointer;line-height:1;padding:0;\"\n    aria-label=\"Close\">✕</button>\n\n  <div style=\"display:flex;align-items:center;gap:8px;\">\n    <svg width=\"15\" height=\"15\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#c9a84c\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"12\" cy=\"12\" r=\"10\"/><line x1=\"12\" y1=\"8\" x2=\"12\" y2=\"12\"/><line x1=\"12\" y1=\"16\" x2=\"12.01\" y2=\"16\"/></svg>\n    <span style=\"font-size:10px;letter-spacing:2.5px;color:#c9a84c;text-transform:uppercase;font-weight:600;\">Site Notice</span>\n  </div>\n\n  <p style=\"font-size:13px;color:#dddddd;line-height:1.65;margin:0;\">\n    We are currently experiencing a <span style=\"color:#c9a84c;font-weight:600;\">high volume of orders</span> and increased traffic. You may notice slight delays while browsing the website; shipping times are the same as usual <span style=\"color:#ffffff;font-weight:600;\">(1–3 business days)</span>. Thank you for your patience and cooperation.\n  </p>\n\n  <div id=\"hv-bar\" style=\"position:absolute;bottom:0;left:0;height:2px;background:#c9a84c;width:100%;border-radius:0 0 6px 6px;\"></div>\n</div>\n\n<script>\n  (function() {\n    if (sessionStorage.getItem('hv_notice_seen')) return;\n\n    var notif = document.getElementById('hv-notif');\n    var bar = document.getElementById('hv-bar');\n    var autoTimer;\n\n    setTimeout(function() {\n      notif.style.opacity = '1';\n      notif.style.transform = 'translateY(0)';\n      bar.style.transition = 'width 10s linear';\n      setTimeout(function() { bar.style.width = '0%'; }, 50);\n      autoTimer = setTimeout(hvClose, 10500);\n    }, 3000);\n\n    window.hvClose = function() {\n      clearTimeout(autoTimer);\n      notif.style.opacity = '0';\n      notif.style.transform = 'translateY(30px)';\n      sessionStorage.setItem('hv_notice_seen', '1');\n    };\n  })();\n</script>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "custom_liquid_eaipxN",
+    "custom_liquid_6cqm9L",
+    "custom_liquid_bT3mdf",
+    "featured_collection",
+    "featured_collection_qiUwVQ",
+    "custom_liquid_tFPPr8",
+    "30784c83-e0d4-481b-b174-352bf7141c14",
+    "custom_liquid_ddhCHr",
+    "custom_liquid_cPxbcW"
+  ]
+}
