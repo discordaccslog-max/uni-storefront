@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --bg: #0F0F10;
+  --bg: #0e0e10;
   --card: #161718;
   --ink: #F7F7F7;
   --muted: #A5A7AC;
@@ -34,31 +34,48 @@ h1, h2, h3, h4, h5, h6 {
   box-sizing: border-box;
 }
 
-/* Exact button style from live site */
+/* ── Gold gradient button (exact match) ── */
 .btn-gold {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   background: linear-gradient(180deg, #E8C766, #BA9930);
   color: #111;
   font-family: var(--font-figtree), sans-serif;
-  font-weight: 800;
-  font-size: 16px;
-  letter-spacing: 0.6px;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 1px;
   border: none;
-  border-radius: 12px;
-  padding: 12px 18px;
+  border-radius: 10px;
+  padding: 0 30px;
+  min-height: 47px;
   cursor: pointer;
   text-decoration: none;
-  box-shadow: rgba(186, 153, 48, 0.26) 0px 12px 28px 0px;
+  box-shadow: rgba(186, 153, 48, 0.25) 0px 10px 25px 0px;
 }
 
 .btn-gold:hover {
   opacity: 0.92;
 }
 
-/* Product card "Choose options" button — exact match */
+/* ── Secondary / outline button ── */
+.btn--secondary {
+  background: transparent;
+  color: #fff;
+  border: 1px solid var(--stroke-55);
+  border-radius: 0;
+  padding: 12px 16px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+/* ── Product card "Choose options" button (exact match) ── */
 .btn-choose {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
+  min-height: 47px;
   background: transparent;
   color: #fff;
   font-family: var(--font-figtree), sans-serif;
@@ -67,7 +84,7 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 1px;
   border: 1px solid rgba(212, 175, 55, 0.55);
   border-radius: 10px;
-  padding: 8px 12px;
+  padding: 8px;
   text-align: center;
   text-decoration: none;
   cursor: pointer;
@@ -79,7 +96,28 @@ h1, h2, h3, h4, h5, h6 {
   background: rgba(212, 175, 55, 0.1);
 }
 
-/* Section divider banner — the golden text bar */
+.btn-choose.sold-out {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* ── "Sold out" badge ── */
+.badge-sold-out {
+  display: inline-block;
+  background: #0e0e10;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 40px;
+  padding: 5px 13px 6px;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  z-index: 2;
+}
+
+/* ── Section divider banner ── */
 .section-divider {
   width: 100%;
   background: linear-gradient(180deg, #171719, #141416);
@@ -95,7 +133,7 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
 }
 
-/* ── nx-* classes (Code 1 — exact Shopify section CSS) ── */
+/* ── nx-* classes (exact Shopify Liquid section CSS) ── */
 .nx-wrap{color:var(--ink);background:var(--bg);border:1px solid rgba(255,255,255,.05);border-radius:18px;padding:28px 22px;margin:28px 0}
 .nx-kicker{display:inline-block;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#FFD976;background:rgba(212,175,55,.08);border:1px solid var(--stroke);border-radius:999px;padding:6px 10px;margin-bottom:12px}
 .nx-h1{font-size:clamp(28px,4vw,44px);line-height:1.1;margin:0 0 6px;font-weight:800}
@@ -127,7 +165,7 @@ h1, h2, h3, h4, h5, h6 {
 .nx-note{color:#A5A7AC;font-size:12.5px;margin-top:10px}
 .nx-note strong{color:#FFD976}
 
-/* ── uni-eta-banner (Code 2) ── */
+/* ── uni-eta-banner (exact match) ── */
 .uni-eta-banner{width:100%;display:flex;justify-content:center;padding:10px 12px;margin:12px 0}
 .uni-eta-banner__inner{width:min(980px,100%);display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:14px;background:rgba(0,0,0,0.45);border:1px solid rgba(212,175,55,0.35);box-shadow:0 10px 30px rgba(0,0,0,0.35);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
 .uni-eta-banner__dot{width:10px;height:10px;border-radius:999px;background:#d4af37;box-shadow:0 0 0 4px rgba(212,175,55,0.16);flex:0 0 auto}
@@ -135,7 +173,56 @@ h1, h2, h3, h4, h5, h6 {
 .uni-eta-banner__text strong{color:#d4af37;font-weight:700}
 @media(max-width:480px){.uni-eta-banner__inner{padding:10px 12px;border-radius:12px}.uni-eta-banner__text{font-size:13px}}
 
-/* ── uni-pop (Code 4 — USA origin popup) ── */
+/* ── Age verification gate ── */
+.age-gate-overlay{display:none;position:fixed;inset:0;z-index:99999;background:rgba(0,0,0,.8)}
+.age-gate-overlay.is-open{display:flex;align-items:flex-start;justify-content:center}
+.age-gate-card{max-width:560px;width:calc(100% - 32px);margin:10vh auto;background:#0F0F10;border:1px solid rgba(212,175,55,.35);border-radius:16px;padding:28px;text-align:center}
+.badge-21{display:inline-block;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#FFD976;background:rgba(212,175,55,.08);border:1px solid var(--stroke);border-radius:999px;padding:6px 12px;font-weight:600}
+.nicotine-warning{margin-top:14px;font-size:11px;color:#A5A7AC;line-height:1.5}
+.nicotine-warning strong{color:#FFD976}
+
+/* ── License vendor badge ── */
+.license-trigger{position:fixed;bottom:20px;left:20px;z-index:9998;background:rgba(0,0,0,.7);border:1px solid rgba(212,175,55,.35);border-radius:10px;padding:8px 14px;cursor:pointer;display:flex;align-items:center;gap:8px;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);transition:border-color .2s}
+.license-trigger:hover{border-color:rgba(212,175,55,.6)}
+.license-trigger__icon{color:#4ade80;font-size:14px}
+.license-trigger__text{color:#fff;font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase}
+.license-modal-overlay{display:none;position:fixed;inset:0;z-index:99999;background:rgba(0,0,0,.85);justify-content:center;align-items:center}
+.license-modal-overlay.is-open{display:flex}
+.license-modal-content{max-width:460px;width:calc(100% - 32px);background:#111;border:1px solid rgba(212,175,55,.3);border-radius:16px;padding:28px;position:relative;max-height:85vh;overflow-y:auto}
+.license-close-btn{position:absolute;top:12px;right:16px;background:none;border:none;color:#888;font-size:22px;cursor:pointer;padding:0;line-height:1}
+.license-close-btn:hover{color:#fff}
+.license-header{text-align:center;margin-bottom:20px}
+.license-badge-tag{display:inline-block;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#4ade80;background:rgba(74,222,128,.08);border:1px solid rgba(74,222,128,.25);border-radius:999px;padding:5px 12px;font-weight:700;margin-bottom:8px}
+.license-vendor-name{font-family:var(--font-oswald),Oswald,sans-serif;font-size:24px;font-weight:500;letter-spacing:2px;color:#fff}
+.license-info-box{border:1px solid rgba(255,255,255,.08);border-radius:12px;overflow:hidden}
+.license-info-row{display:flex;justify-content:space-between;align-items:baseline;padding:10px 16px;border-bottom:1px solid rgba(255,255,255,.06)}
+.license-info-row:last-child{border-bottom:0}
+.license-info-label{font-size:12px;color:#888;letter-spacing:.5px}
+.license-info-value{font-size:13px;color:#fff;font-weight:500;text-align:right}
+.license-official-box{margin-top:16px;background:rgba(212,175,55,.06);border:1px solid rgba(212,175,55,.2);border-radius:12px;padding:16px;text-align:center}
+.license-official-title{font-size:12px;font-weight:700;letter-spacing:1.5px;color:#FFD976;margin-bottom:6px}
+.license-official-text{font-size:11px;color:#A5A7AC;line-height:1.5}
+.license-verified-strip{margin-top:16px;text-align:center}
+.license-verified-badge{display:inline-block;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#4ade80;background:rgba(74,222,128,.06);border:1px solid rgba(74,222,128,.2);border-radius:999px;padding:6px 14px;font-weight:600}
+.license-verified-note{font-size:10px;color:#666;margin-top:8px;line-height:1.5}
+
+/* ── FeaturedCollection (featured-collection Liquid section port) ── */
+.page-width{max-width:1600px;margin-left:auto;margin-right:auto;padding-left:24px;padding-right:24px}
+.fc-section{padding:48px 0}
+.fc-header{margin-bottom:28px}
+.fc-title{font-family:var(--font-oswald),Oswald,sans-serif;font-size:clamp(24px,3.5vw,40px);font-weight:500;letter-spacing:.84px;color:#fff;margin:0 0 8px;line-height:1.15}
+.fc-desc{color:var(--muted);font-size:15px;margin:0;line-height:1.6}
+.fc-slider-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.fc-slider-wrap::-webkit-scrollbar{display:none}
+.fc-grid{list-style:none;margin:0;padding:0;display:grid;gap:28px;grid-template-columns:repeat(var(--cols,5),minmax(0,1fr))}
+@media(max-width:1100px){.fc-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media(max-width:860px){.fc-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:600px){.fc-grid{display:flex;flex-wrap:nowrap;gap:16px;min-width:0}.fc-item{flex:0 0 160px}}
+.fc-item{list-style:none}
+.fc-view-all{margin-top:36px;text-align:center}
+.fc-view-all-btn{display:inline-block;width:auto;min-width:200px;padding:12px 32px}
+
+/* ── uni-pop (USA origin popup) ── */
 .uni-pop{--uni-black:#000;--uni-gold:#C9A24B;--uni-ink:#F2ECDF;--uni-muted:#A0988A;--uni-sans:var(--font-figtree),Figtree,"Helvetica Neue",Arial,sans-serif;--uni-display:"Libre Caslon Display","Libre Caslon Text",Georgia,"Times New Roman",serif;--uni-text:"Libre Caslon Text",Georgia,"Times New Roman",serif;position:fixed;inset:0;z-index:100000;display:flex;overflow-y:auto;overscroll-behavior:contain;padding:max(16px,env(safe-area-inset-top)) 16px max(16px,env(safe-area-inset-bottom));opacity:0;transition:opacity .4s ease}
 .uni-pop[hidden]{display:none}
 .uni-pop.is-open{opacity:1}
