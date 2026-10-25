@@ -24,160 +24,84 @@ const faqs = [
   { q: 'What does delivery look like?', a: 'Your order ships quickly in plain packaging with full tracking. Delivery timelines are shown at checkout based on your address.' },
 ]
 
-/* shared inline styles — exact nx-kicker from live site */
-const pill = {
-  display: 'inline-block',
-  padding: '6px 10px',
-  borderRadius: '999px',
-  border: '1px solid rgba(212,175,55,0.28)',
-  background: 'rgba(212,175,55,0.08)',
-  color: '#FFD976',
-  fontSize: '12px',
-  fontWeight: 500,
-  letterSpacing: '1.92px',
-  textTransform: 'uppercase' as const,
-}
-
-const card = {
-  background: '#161718',
-  border: '1px solid rgba(255,255,255,0.06)',
-  borderRadius: '14px',
-  padding: '20px',
-}
-
 export default function HomePage() {
   return (
     <div>
-      {/* ── Hero + intro sections (nx-wrap) ── */}
+
+      {/* ── Hero + intro section ── */}
       <div style={{ maxWidth: '1600px', margin: '0 auto', padding: '0 24px' }}>
+        <section className="nx-wrap">
 
-        {/* Hero */}
-        <section style={{ padding: '40px 0 24px' }}>
-          <div style={pill}>Premium • Fast • Verified</div>
-
-          <h1
-            style={{
-              fontFamily: 'var(--font-oswald), Oswald, sans-serif',
-              fontSize: 'clamp(32px, 5vw, 44px)',
-              fontWeight: 800,
-              lineHeight: 1.1,
-              color: '#fff',
-              margin: '16px 0 12px',
-              maxWidth: '800px',
-            }}
-          >
-            Dispensary-Sourced Vapes. Delivered To Your Door.
-          </h1>
-
-          <p style={{ color: '#A5A7AC', fontSize: 'clamp(14px, 2vw, 16px)', maxWidth: '680px', marginBottom: '24px', lineHeight: 1.6 }}>
-            We source directly from licensed dispensaries and deliver to you quickly and discreetly. Every product is authenticated and quality-checked so you always know exactly what you&apos;re getting.
+          <span className="nx-kicker">Premium • Fast • Verified</span>
+          <h1 className="nx-h1">Dispensary-Sourced Vapes. Delivered To Your Door.</h1>
+          <p className="nx-sub">
+            We source directly from licensed dispensaries and deliver to you quickly and discreetly.
+            Every product is authenticated and quality-checked so you always know exactly what you&apos;re getting.
           </p>
-
-          <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
-            <Link href="/products" className="btn-gold">Explore Products</Link>
+          <div className="nx-cta">
+            <Link href="/products" className="nx-btn nx-btn--gold">Explore Products</Link>
           </div>
-        </section>
 
-        {/* Value props */}
-        <section style={{ paddingBottom: '32px' }}>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '16px' }}>
+          {/* Value props */}
+          <div className="nx-grid nx-3">
             {valueProps.map((v) => (
-              <div key={v.title} style={card}>
-                <div style={{
-                  width: 38, height: 38, borderRadius: '10px',
-                  background: 'rgba(212,175,55,0.12)',
-                  border: '1px solid rgba(212,175,55,0.28)',
-                  display: 'flex', alignItems: 'center', justifyContent: 'center',
-                  fontSize: '18px', marginBottom: '12px',
-                }}>
-                  {v.icon}
-                </div>
-                <h3 style={{ fontFamily: 'var(--font-oswald), sans-serif', fontWeight: 700, fontSize: '18px', marginBottom: '6px', color: '#fff' }}>{v.title}</h3>
-                <p style={{ color: '#A5A7AC', fontSize: '14px', lineHeight: 1.5 }}>{v.desc}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* How It Works */}
-        <section style={{ paddingBottom: '32px' }}>
-          <div style={{ ...pill, marginBottom: '20px' }}>How it works</div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '16px', marginBottom: '16px' }}>
-            {steps.map((s) => (
-              <div key={s.num} style={{ ...card, display: 'flex', gap: '14px', alignItems: 'flex-start' }}>
-                <div style={{
-                  minWidth: 34, height: 34, borderRadius: '999px',
-                  background: 'rgba(212,175,55,0.14)',
-                  border: '1px solid rgba(212,175,55,0.28)',
-                  display: 'flex', alignItems: 'center', justifyContent: 'center',
-                  fontWeight: 800, color: '#FFD976', fontSize: '14px', flexShrink: 0,
-                }}>
-                  {s.num}
-                </div>
-                <div>
-                  <h3 style={{ fontFamily: 'var(--font-oswald), sans-serif', fontWeight: 700, fontSize: '16px', marginBottom: '4px', color: '#fff' }}>{s.title}</h3>
-                  <p style={{ color: '#A5A7AC', fontSize: '13px', lineHeight: 1.5 }}>{s.desc}</p>
-                </div>
+              <div key={v.title} className="nx-card">
+                <div className="nx-icon">{v.icon}</div>
+                <h3>{v.title}</h3>
+                <p>{v.desc}</p>
               </div>
             ))}
           </div>
 
-          {/* Pills strip */}
-          <div style={{
-            display: 'flex', gap: '10px', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center',
-            background: 'linear-gradient(180deg,#171719,#141416)',
-            border: '1px solid rgba(212,175,55,0.28)',
-            borderRadius: '14px', padding: '14px 16px',
-          }}>
+          {/* How It Works */}
+          <div style={{ marginTop: '26px' }}>
+            <span className="nx-kicker">How it works</span>
+            <div className="nx-grid nx-4">
+              {steps.map((s) => (
+                <div key={s.num} className="nx-card nx-step">
+                  <div className="num">{s.num}</div>
+                  <div>
+                    <h3>{s.title}</h3>
+                    <p>{s.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Verification strip */}
+          <div className="nx-strip" aria-label="Assurances">
             {['Licensed sourcing', 'Tamper-evident seals', 'Batch / lot checks', 'Discreet packaging'].map((p) => (
-              <span key={p} style={{ ...pill, textTransform: 'none', fontWeight: 600, fontSize: '13px', letterSpacing: '0.3px' }}>{p}</span>
+              <span key={p} className="nx-pill">{p}</span>
             ))}
           </div>
-        </section>
 
-        {/* FAQs */}
-        <section style={{ paddingBottom: '40px', maxWidth: '760px' }}>
-          <div style={{ ...pill, marginBottom: '20px' }}>FAQs</div>
-          <div style={{ border: '1px solid rgba(255,255,255,0.06)', borderRadius: '14px', overflow: 'hidden' }}>
-            {faqs.map((faq, i) => (
-              <details
-                key={faq.q}
-                style={{ borderTop: i > 0 ? '1px solid rgba(255,255,255,0.06)' : 'none' }}
-              >
-                <summary style={{
-                  cursor: 'pointer', listStyle: 'none',
-                  padding: '14px 16px',
-                  background: '#161718',
-                  fontWeight: 700, fontSize: '14px', color: '#fff',
-                  fontFamily: 'var(--font-figtree), sans-serif',
-                }}>
-                  {faq.q}
-                </summary>
-                <div style={{ padding: '0 16px 14px', background: '#121314', color: '#A5A7AC', fontSize: '14px', lineHeight: 1.6 }}>
-                  {faq.a}
-                </div>
-              </details>
-            ))}
+          {/* FAQs */}
+          <div>
+            <span className="nx-kicker">FAQs</span>
+            <div className="nx-faq">
+              {faqs.map((faq) => (
+                <details key={faq.q}>
+                  <summary>{faq.q}</summary>
+                  <div className="ans">{faq.a}</div>
+                </details>
+              ))}
+            </div>
+            <p className="nx-note">
+              <strong>Important:</strong> By ordering you confirm you are 21+ and agree to abide by all local regulations. Availability may vary by region.
+            </p>
           </div>
-          <p style={{ color: '#555', fontSize: '12.5px', marginTop: '10px' }}>
-            <strong style={{ color: '#FFD976' }}>Important:</strong> By ordering you confirm you are 21+ and agree to abide by all local regulations. Availability may vary by region.
-          </p>
+
         </section>
       </div>
 
-      {/* Shipping ETA — full width */}
-      <div style={{ padding: '0 24px', maxWidth: '1600px', margin: '0 auto 24px' }}>
-        <div style={{
-          display: 'flex', alignItems: 'center', gap: '10px',
-          padding: '12px 16px', borderRadius: '14px',
-          background: 'rgba(0,0,0,0.45)',
-          border: '1px solid rgba(212,175,55,0.35)',
-          backdropFilter: 'blur(6px)',
-        }}>
-          <span style={{ width: 10, height: 10, borderRadius: '999px', background: '#d4af37', boxShadow: '0 0 0 4px rgba(212,175,55,0.16)', flexShrink: 0 }} />
-          <p style={{ color: 'rgba(255,255,255,0.92)', fontSize: '14px' }}>
-            Current Shipping ETA: <strong style={{ color: '#d4af37' }}>2–4 Business Days (Standard USPS Shipping)</strong>
-          </p>
+      {/* Shipping ETA banner (Code 2) */}
+      <div className="uni-eta-banner" role="status" aria-live="polite">
+        <div className="uni-eta-banner__inner">
+          <span className="uni-eta-banner__dot" aria-hidden="true" />
+          <span className="uni-eta-banner__text">
+            Current Shipping ETA: <strong>2–4 Business Days (Standard USPS Shipping)</strong>
+          </span>
         </div>
       </div>
 
@@ -194,10 +118,8 @@ export default function HomePage() {
               fontFamily: 'var(--font-oswald), Oswald, sans-serif',
               fontSize: 'clamp(28px, 4vw, 56px)',
               fontWeight: 500,
-              fontStyle: 'normal',
               color: '#fff',
               marginBottom: '32px',
-              maxWidth: '900px',
               lineHeight: 1.1,
             }}
           >
@@ -224,7 +146,6 @@ export default function HomePage() {
               fontFamily: 'var(--font-oswald), Oswald, sans-serif',
               fontSize: 'clamp(28px, 4vw, 56px)',
               fontWeight: 500,
-              fontStyle: 'normal',
               color: '#fff',
               marginBottom: '32px',
               lineHeight: 1.1,
@@ -268,7 +189,7 @@ export default function HomePage() {
         <h2 style={{
           fontFamily: 'var(--font-oswald), Oswald, sans-serif',
           fontSize: 'clamp(28px, 4vw, 56px)',
-          fontWeight: 500, fontStyle: 'normal',
+          fontWeight: 500,
           color: '#fff', marginBottom: '24px',
           lineHeight: 1.1,
         }}>
