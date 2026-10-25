@@ -18,8 +18,8 @@ const config: Config = {
         border: 'rgba(212,175,55,0.28)',
       },
       fontFamily: {
-        heading: ['var(--font-oswald)', 'sans-serif'],
-        body: ['var(--font-inter)', 'sans-serif'],
+        heading: ['var(--font-oswald)', 'Oswald', 'sans-serif'],
+        body: ['var(--font-figtree)', 'Figtree', 'sans-serif'],
       },
       maxWidth: {
         site: '1600px',

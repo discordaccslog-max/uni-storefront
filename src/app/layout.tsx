@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Oswald, Inter } from 'next/font/google'
+import { Oswald, Figtree } from 'next/font/google'
 import './globals.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
@@ -10,9 +10,10 @@ const oswald = Oswald({
   display: 'swap',
 })
 
-const inter = Inter({
+const figtree = Figtree({
   subsets: ['latin'],
-  variable: '--font-inter',
+  variable: '--font-figtree',
+  weight: ['400', '500', '700', '800'],
   display: 'swap',
 })
 
@@ -23,7 +24,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${oswald.variable} ${inter.variable}`}>
+    <html lang="en" className={`${oswald.variable} ${figtree.variable}`}>
       <body className="bg-bg text-white min-h-screen flex flex-col">
         <Header />
         <main className="flex-1">{children}</main>
