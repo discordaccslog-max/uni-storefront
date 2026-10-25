@@ -1,9 +1,22 @@
 import Link from 'next/link'
+import ProductCard from '@/components/ProductCard'
 import { getProductsByCollection } from '@/data/products'
-import FeaturedCollection from '@/components/FeaturedCollection'
 
 const singleProducts = getProductsByCollection('single')
 const bulkProducts = getProductsByCollection('bulk')
+
+const valueProps = [
+  { icon: '🏷️', title: 'Dispensary Direct', desc: 'We only partner with licensed dispensaries so products remain compliant, traceable, and fresh.' },
+  { icon: '✅', title: 'Authenticated & Verified', desc: 'Each item is sealed, batch-checked, and verified for authenticity before it ships to you.' },
+  { icon: '🚚', title: 'Fast, Discreet Delivery', desc: 'Plain packaging, real-time updates, and quick fulfillment — your privacy comes first.' },
+]
+
+const steps = [
+  { num: '1', title: 'Browse', desc: 'Choose verified products curated from trusted dispensaries.' },
+  { num: '2', title: 'Verify', desc: 'We confirm authenticity, seal integrity, and batch details on every item.' },
+  { num: '3', title: 'Deliver', desc: 'Your order ships quickly in discreet, protective packaging with tracking.' },
+  { num: '4', title: 'Enjoy', desc: 'Open-box confidence: what you ordered is exactly what arrives — verified.' },
+]
 
 const faqs = [
   { q: 'Where do you source products?', a: 'Exclusively from licensed dispensaries and authorized suppliers. We do not purchase from grey-market sources.' },
@@ -14,115 +27,80 @@ const faqs = [
 export default function HomePage() {
   return (
     <div>
-      {/* ── nx-wrap hero section ── */}
-      <div className="nx-wrap" style={{ maxWidth: '980px', margin: '28px auto' }}>
-        <div style={{ textAlign: 'center' }}>
-          <span className="nx-kicker">Premium &bull; Fast &bull; Verified</span>
-          <h1 className="nx-h1">
-            Dispensary-Sourced Vapes.<br />Delivered To Your Door.
-          </h1>
+
+      {/* ── Hero + intro section ── */}
+      <div style={{ maxWidth: '1600px', margin: '0 auto', padding: '0 24px' }}>
+        <section className="nx-wrap">
+
+          <span className="nx-kicker">Premium • Fast • Verified</span>
+          <h1 className="nx-h1">Dispensary-Sourced Vapes. Delivered To Your Door.</h1>
           <p className="nx-sub">
-            Licensed. Authenticated. Discreet. 35,000+ customers nationwide.
+            We source directly from licensed dispensaries and deliver to you quickly and discreetly.
+            Every product is authenticated and quality-checked so you always know exactly what you&apos;re getting.
           </p>
+          <div className="nx-cta">
+            <Link href="/products" className="nx-btn nx-btn--gold">Explore Products</Link>
+          </div>
 
-          <div className="nx-cta" style={{ justifyContent: 'center' }}>
-            <Link href="/products" className="nx-btn nx-btn--gold">
-              Explore Products
-            </Link>
+          {/* Value props */}
+          <div className="nx-grid nx-3">
+            {valueProps.map((v) => (
+              <div key={v.title} className="nx-card">
+                <div className="nx-icon">{v.icon}</div>
+                <h3>{v.title}</h3>
+                <p>{v.desc}</p>
+              </div>
+            ))}
           </div>
-        </div>
 
-        {/* 3 feature cards */}
-        <div className="nx-grid nx-3" style={{ marginTop: '24px' }}>
-          <div className="nx-card">
-            <div className="nx-icon">&#127981;</div>
-            <h3>Dispensary Direct</h3>
-            <p>Sourced exclusively from licensed dispensaries. Products remain compliant, traceable, and fresh.</p>
-          </div>
-          <div className="nx-card">
-            <div className="nx-icon">&#128737;</div>
-            <h3>Authenticated &amp; Verified</h3>
-            <p>Every item is sealed, batch-checked, and verified for authenticity before it ships.</p>
-          </div>
-          <div className="nx-card">
-            <div className="nx-icon">&#128666;</div>
-            <h3>Fast Discreet Delivery</h3>
-            <p>Plain packaging, real-time tracking, and quick fulfillment. Your privacy comes first.</p>
-          </div>
-        </div>
-
-        {/* How it works */}
-        <div style={{ textAlign: 'center', marginTop: '32px' }}>
-          <span className="nx-kicker">How It Works</span>
-        </div>
-        <div className="nx-grid nx-4" style={{ marginTop: '16px' }}>
-          <div className="nx-step">
-            <div className="num">01</div>
-            <div>
-              <strong style={{ color: '#fff' }}>Browse</strong>
-              <p className="nx-sub" style={{ margin: '4px 0 0', fontSize: '13px' }}>
-                Explore verified products curated from trusted dispensaries.
-              </p>
+          {/* How It Works */}
+          <div style={{ marginTop: '26px' }}>
+            <span className="nx-kicker">How it works</span>
+            <div className="nx-grid nx-4">
+              {steps.map((s) => (
+                <div key={s.num} className="nx-card nx-step">
+                  <div className="num">{s.num}</div>
+                  <div>
+                    <h3>{s.title}</h3>
+                    <p>{s.desc}</p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
-          <div className="nx-step">
-            <div className="num">02</div>
-            <div>
-              <strong style={{ color: '#fff' }}>Verify</strong>
-              <p className="nx-sub" style={{ margin: '4px 0 0', fontSize: '13px' }}>
-                We confirm authenticity, seal integrity, and batch details.
-              </p>
-            </div>
-          </div>
-          <div className="nx-step">
-            <div className="num">03</div>
-            <div>
-              <strong style={{ color: '#fff' }}>Ship</strong>
-              <p className="nx-sub" style={{ margin: '4px 0 0', fontSize: '13px' }}>
-                Your order ships quickly in discreet, protective packaging.
-              </p>
-            </div>
-          </div>
-          <div className="nx-step">
-            <div className="num">04</div>
-            <div>
-              <strong style={{ color: '#fff' }}>Enjoy</strong>
-              <p className="nx-sub" style={{ margin: '4px 0 0', fontSize: '13px' }}>
-                What you ordered is exactly what arrives — guaranteed.
-              </p>
-            </div>
-          </div>
-        </div>
 
-        {/* Trust strip */}
-        <div className="nx-strip">
-          <span className="nx-pill">Licensed Sourcing</span>
-          <span className="nx-pill">Tamper-Evident Seals</span>
-          <span className="nx-pill">Batch Verified</span>
-          <span className="nx-pill">Discreet Packaging</span>
-        </div>
+          {/* Verification strip */}
+          <div className="nx-strip" aria-label="Assurances">
+            {['Licensed sourcing', 'Tamper-evident seals', 'Batch / lot checks', 'Discreet packaging'].map((p) => (
+              <span key={p} className="nx-pill">{p}</span>
+            ))}
+          </div>
 
-        {/* FAQs */}
-        <div className="nx-faq" style={{ marginTop: '18px' }}>
-          {faqs.map((faq) => (
-            <details key={faq.q}>
-              <summary>{faq.q}</summary>
-              <div className="ans">{faq.a}</div>
-            </details>
-          ))}
-        </div>
+          {/* FAQs */}
+          <div>
+            <span className="nx-kicker">FAQs</span>
+            <div className="nx-faq">
+              {faqs.map((faq) => (
+                <details key={faq.q}>
+                  <summary>{faq.q}</summary>
+                  <div className="ans">{faq.a}</div>
+                </details>
+              ))}
+            </div>
+            <p className="nx-note">
+              <strong>Important:</strong> By ordering you confirm you are 21+ and agree to abide by all local regulations. Availability may vary by region.
+            </p>
+          </div>
 
-        <p className="nx-note" style={{ textAlign: 'center', marginTop: '12px' }}>
-          <strong>Important:</strong> By ordering you confirm you are 21+ and agree to abide by all local regulations.
-        </p>
+        </section>
       </div>
 
-      {/* ── Shipping ETA banner ── */}
-      <div className="uni-eta-banner">
+      {/* Shipping ETA banner (Code 2) */}
+      <div className="uni-eta-banner" role="status" aria-live="polite">
         <div className="uni-eta-banner__inner">
           <span className="uni-eta-banner__dot" aria-hidden="true" />
           <span className="uni-eta-banner__text">
-            Current Shipping ETA: <strong>2-4 Business Days (Standard USPS)</strong>
+            Current Shipping ETA: <strong>2–4 Business Days (Standard USPS Shipping)</strong>
           </span>
         </div>
       </div>
@@ -132,112 +110,97 @@ export default function HomePage() {
         Dispensary-Sourced, Authenticated &amp; Delivered.
       </div>
 
-      {/* ── Singles — Featured Collection ── */}
-      <FeaturedCollection
-        title="Dispensary-Sourced, Authenticated & Delivered."
-        description="FREE SHIPPING UNTIL AUGUST 1ST!"
-        products={singleProducts}
-        viewAllHref="/products"
-        viewAllLabel="View all products"
-        columnsDesktop={5}
-      />
+      {/* Singles collection */}
+      <div style={{ maxWidth: '1600px', margin: '0 auto', padding: '0 24px' }}>
+        <section style={{ paddingTop: '32px', paddingBottom: '52px' }}>
+          <h2
+            style={{
+              fontFamily: 'var(--font-oswald), Oswald, sans-serif',
+              fontSize: 'clamp(28px, 4vw, 56px)',
+              fontWeight: 500,
+              color: '#fff',
+              marginBottom: '32px',
+              lineHeight: 1.1,
+            }}
+          >
+            Dispensary-Sourced, Authenticated &amp; Delivered. (FREE SHIPPING UNTIL AUGUST 1ST!)
+          </h2>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-10">
+            {singleProducts.map((product) => (
+              <ProductCard key={product.id} product={product} />
+            ))}
+          </div>
+        </section>
+      </div>
 
       {/* ── Section divider ── */}
       <div className="section-divider">
         Dispensary-Sourced, Authenticated &amp; Delivered.
       </div>
 
-      {/* ── Bulk — Featured Collection ── */}
-      <FeaturedCollection
-        title="Bulk Orders / Prices."
-        description="Please contact us for any larger bulk order inquiries!"
-        products={bulkProducts}
-        viewAllHref="/products"
-        viewAllLabel="View all bulk products"
-        columnsDesktop={5}
-      />
-
-      {/* ── Raw Garden sponsor badge ── */}
-      <div
-        style={{
-          maxWidth: '640px',
-          margin: '48px auto',
-          padding: '24px',
-          borderRadius: '16px',
-          background: 'radial-gradient(circle at 50% 0%, rgba(212,175,55,0.12) 0%, transparent 70%)',
-          border: '1px solid rgba(212,175,55,0.2)',
-          textAlign: 'center',
-        }}
-      >
-        <div
-          style={{
-            display: 'inline-block',
-            fontSize: '10px',
-            letterSpacing: '2px',
-            textTransform: 'uppercase',
-            color: '#FFD976',
-            background: 'rgba(212,175,55,0.08)',
-            border: '1px solid rgba(212,175,55,0.28)',
-            borderRadius: '999px',
-            padding: '5px 12px',
-            marginBottom: '10px',
-            fontWeight: 600,
-          }}
-        >
-          Official Sponsor
-        </div>
-        <h3
-          style={{
-            fontFamily: 'var(--font-oswald), Oswald, sans-serif',
-            fontSize: '28px',
-            fontWeight: 500,
-            letterSpacing: '1px',
-            color: '#fff',
-            margin: '0 0 6px',
-          }}
-        >
-          RAW GARDEN
-        </h3>
-        <p style={{ color: '#A5A7AC', fontSize: '13px', margin: 0, lineHeight: 1.5 }}>
-          Premium live resin, sourced directly from California dispensaries.
-          Trusted by thousands of customers nationwide.
-        </p>
+      {/* Bulk collection */}
+      <div style={{ maxWidth: '1600px', margin: '0 auto', padding: '0 24px' }}>
+        <section style={{ paddingTop: '36px', paddingBottom: '36px' }}>
+          <h2
+            style={{
+              fontFamily: 'var(--font-oswald), Oswald, sans-serif',
+              fontSize: 'clamp(28px, 4vw, 56px)',
+              fontWeight: 500,
+              color: '#fff',
+              marginBottom: '32px',
+              lineHeight: 1.1,
+            }}
+          >
+            Bulk Orders / Prices. Please contact us for any larger bulk order inquires!
+          </h2>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-10">
+            {bulkProducts.map((product) => (
+              <ProductCard key={product.id} product={product} />
+            ))}
+          </div>
+        </section>
       </div>
 
-      {/* ── Presented / Managed By UNI CTA ── */}
-      <section
-        style={{
-          textAlign: 'center',
-          padding: '48px 24px 60px',
-          background: 'linear-gradient(180deg, #0e0e10, #111113)',
-        }}
-      >
-        <h2
-          style={{
+      {/* Raw Garden sponsor badge */}
+      <div style={{ display: 'flex', justifyContent: 'center', padding: '40px 24px 52px' }}>
+        <div style={{
+          maxWidth: '640px', width: '100%',
+          borderRadius: '20px', padding: '40px 30px', textAlign: 'center',
+          background: 'radial-gradient(circle at center, rgba(255,215,0,0.08), rgba(0,0,0,0.4))',
+          border: '1px solid rgba(212,175,55,0.25)',
+          boxShadow: '0 0 24px rgba(255,215,0,0.05)',
+        }}>
+          <h2 style={{
             fontFamily: 'var(--font-oswald), Oswald, sans-serif',
-            fontSize: 'clamp(22px, 3vw, 34px)',
-            fontWeight: 500,
-            letterSpacing: '1px',
-            color: '#fff',
-            margin: '0 0 6px',
-            lineHeight: 1.2,
-          }}
-        >
-          Presented / Managed By UNI.
-        </h2>
-        <p
-          style={{
-            color: '#A5A7AC',
-            fontSize: '15px',
-            margin: '0 0 24px',
-          }}
-        >
+            fontSize: '28px', fontWeight: 800,
+            textTransform: 'uppercase', letterSpacing: '1px',
+            color: '#FFD976', margin: 0,
+          }}>
+            Official Sponsor of Raw Garden
+          </h2>
+          <p style={{ fontSize: '14px', color: '#aaa', marginTop: '10px', letterSpacing: '0.5px' }}>
+            Based in California
+          </p>
+        </div>
+      </div>
+
+      {/* Presented / Managed By UNI CTA */}
+      <div style={{ textAlign: 'center', padding: '32px 24px 52px', background: '#0e0e10' }}>
+        <h2 style={{
+          fontFamily: 'var(--font-oswald), Oswald, sans-serif',
+          fontSize: 'clamp(28px, 4vw, 56px)',
+          fontWeight: 500,
+          color: '#fff', marginBottom: '24px',
+          lineHeight: 1.1,
+        }}>
+          Presented / Managed By UNI.<br />
           35,000+ Customers Nationwide
-        </p>
+        </h2>
         <Link href="/products" className="btn-gold">
           Shop Now!
         </Link>
-      </section>
+      </div>
+
     </div>
   )
 }
