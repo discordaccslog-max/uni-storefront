@@ -24,18 +24,17 @@ const faqs = [
   { q: 'What does delivery look like?', a: 'Your order ships quickly in plain packaging with full tracking. Delivery timelines are shown at checkout based on your address.' },
 ]
 
-/* shared inline styles */
+/* shared inline styles — exact nx-kicker from live site */
 const pill = {
-  display: 'inline-flex',
-  alignItems: 'center',
-  padding: '6px 12px',
+  display: 'inline-block',
+  padding: '6px 10px',
   borderRadius: '999px',
-  border: '1px solid rgba(212,175,55,0.55)',
+  border: '1px solid rgba(212,175,55,0.28)',
   background: 'rgba(212,175,55,0.08)',
-  color: '#D4AF37',
+  color: '#FFD976',
   fontSize: '12px',
-  fontWeight: 700,
-  letterSpacing: '1.5px',
+  fontWeight: 500,
+  letterSpacing: '1.92px',
   textTransform: 'uppercase' as const,
 }
 
@@ -59,8 +58,8 @@ export default function HomePage() {
           <h1
             style={{
               fontFamily: 'var(--font-oswald), Oswald, sans-serif',
-              fontSize: 'clamp(32px, 5vw, 56px)',
-              fontWeight: 700,
+              fontSize: 'clamp(32px, 5vw, 44px)',
+              fontWeight: 800,
               lineHeight: 1.1,
               color: '#fff',
               margin: '16px 0 12px',
@@ -193,15 +192,16 @@ export default function HomePage() {
           <h2
             style={{
               fontFamily: 'var(--font-oswald), Oswald, sans-serif',
-              fontSize: 'clamp(24px, 3vw, 36px)',
-              fontWeight: 700,
-              fontStyle: 'italic',
+              fontSize: 'clamp(28px, 4vw, 56px)',
+              fontWeight: 500,
+              fontStyle: 'normal',
               color: '#fff',
               marginBottom: '32px',
               maxWidth: '900px',
+              lineHeight: 1.1,
             }}
           >
-            Dispensary-Sourced, Authenticated &amp; Delivered.
+            Dispensary-Sourced, Authenticated &amp; Delivered. (FREE SHIPPING UNTIL AUGUST 1ST!)
           </h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-10">
             {singleProducts.map((product) => (
@@ -222,10 +222,12 @@ export default function HomePage() {
           <h2
             style={{
               fontFamily: 'var(--font-oswald), Oswald, sans-serif',
-              fontSize: 'clamp(24px, 3vw, 36px)',
-              fontWeight: 700,
+              fontSize: 'clamp(28px, 4vw, 56px)',
+              fontWeight: 500,
+              fontStyle: 'normal',
               color: '#fff',
               marginBottom: '32px',
+              lineHeight: 1.1,
             }}
           >
             Bulk Orders / Prices. Please contact us for any larger bulk order inquires!
@@ -249,7 +251,7 @@ export default function HomePage() {
         }}>
           <h2 style={{
             fontFamily: 'var(--font-oswald), Oswald, sans-serif',
-            fontSize: '28px', fontWeight: 700,
+            fontSize: '28px', fontWeight: 800,
             textTransform: 'uppercase', letterSpacing: '1px',
             color: '#FFD976', margin: 0,
           }}>
@@ -265,9 +267,10 @@ export default function HomePage() {
       <div style={{ textAlign: 'center', padding: '32px 24px 52px', background: '#0e0e10' }}>
         <h2 style={{
           fontFamily: 'var(--font-oswald), Oswald, sans-serif',
-          fontSize: 'clamp(28px, 4vw, 48px)',
-          fontWeight: 700, fontStyle: 'italic',
+          fontSize: 'clamp(28px, 4vw, 56px)',
+          fontWeight: 500, fontStyle: 'normal',
           color: '#fff', marginBottom: '24px',
+          lineHeight: 1.1,
         }}>
           Presented / Managed By UNI.<br />
           35,000+ Customers Nationwide

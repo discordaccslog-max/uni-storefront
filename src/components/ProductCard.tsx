@@ -22,18 +22,23 @@ export default function ProductCard({ product }: { product: Product }) {
         {/* Info */}
         <div className="pt-3 pb-1">
           <h3
-            className="text-sm font-bold leading-tight mb-1 line-clamp-2"
+            className="leading-tight mb-1 line-clamp-2"
             style={{
-              fontFamily: 'var(--font-figtree), sans-serif',
+              fontFamily: 'var(--font-oswald), Oswald, sans-serif',
+              fontSize: '18px',
+              fontWeight: 500,
               color: '#fff',
-              letterSpacing: '0.3px',
+              letterSpacing: '0.84px',
             }}
           >
             {product.title}
           </h3>
+          <p style={{ fontSize: '11px', color: '#A5A7AC', fontWeight: 400, marginBottom: '2px' }}>
+            Regular price
+          </p>
           <p
-            className="text-sm mb-3"
-            style={{ color: '#fff', fontWeight: 500 }}
+            className="mb-3"
+            style={{ color: '#fff', fontWeight: 500, fontSize: '16px' }}
           >
             ${product.price} USD
           </p>
